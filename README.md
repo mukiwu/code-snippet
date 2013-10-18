@@ -28,20 +28,37 @@ Code Snippet
 		</article>
  
 ### Sass
-		div[class*=product] {
-			.breadcrumb {
-				border-left: 7px solid #ee5c9e;
-				margin-bottom: 16px;
-				padding-left: 7px;
+		div [class*=epg] {
+			.title {
+				width: 257px;
+				position: relative;
+			}
+			.breadcrumb, .title {
+				border-left: 7px solid #e46941;
+				margin: 0;
+				padding: 0 0 0 7px;
 				.current {
-					color: #ee5c9e;
+					color: #e46941;
 				}
-				div{
-					&.sprites-more {
-						@extend .sprites-more;
-						@include sprite-background-position($sprites-sprites, more, 30px, 14px);
-					}
-				}
+			}
+			.entry {
+				border-bottom: 1px solid #fafafa;
+				@include middle_out;
+			}
+		}
+		
+		button {
+			border: none;
+			color: #fff;
+			padding: 5px 12px;
+			margin: 0 10px 0 0;
+			@include text-shadow(1px 1px 1px rgba(100,100,100, .5));
+			@include box-shadow(0 1px 1px rgba(0,0,0, .8));
+			&[class="add"] {
+				background: #ff5b26;
+			}
+			&[class="invite"] {
+				background: #a5938f;
 			}
 		}
  
